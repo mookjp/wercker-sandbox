@@ -1,0 +1,11 @@
+box: wercker-labs/docker
+build:
+  steps:
+    - script:
+        name: docker install
+        code: |
+          ls -la docker
+          mkdir tmp
+          curl https://get.docker.com/builds/Linux/x86_64/docker-latest -o tmp/docker
+          ls /usr/local/bin
+          ls /var/run/docker.sock
